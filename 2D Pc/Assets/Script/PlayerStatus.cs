@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStatus : CharacterStatus
 {
+    
     protected override void Teste()
     {
        

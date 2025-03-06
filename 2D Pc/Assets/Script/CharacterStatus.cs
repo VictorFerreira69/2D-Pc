@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public  abstract class CharacterStatus : MonoBehaviour
+public  abstract class CharacterStatus : MonoBehaviour, IDamageable
 {
 
     [SerializeField] float lifeMax;
     [SerializeField] float speed;
     float life;
+    
 
     public float LifeMax { get => lifeMax;}
     public float Speed { get => speed;}
@@ -32,7 +33,19 @@ public  abstract class CharacterStatus : MonoBehaviour
     {
       //Possui corpo executavel
     }
-    
 
-    
+    public void TakeDamage(float damage)
+    {
+      life -= damage;
+       
+       if(life <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+
+
+
 }
