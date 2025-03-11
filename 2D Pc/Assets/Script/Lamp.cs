@@ -24,6 +24,11 @@ public class Lamp : MonoBehaviour, IInteractable
         }
     }
 
+    public void Interact(GameObject item)
+    {
+        throw new System.NotImplementedException();
+    }
+
 
     // Start is called before the first frame update
     void Start()
